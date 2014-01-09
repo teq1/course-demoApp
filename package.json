@@ -1,0 +1,43 @@
+{
+  "name": "COURSE-APP-DEMO",
+  "version": "0.0.2-6",
+  "private": true,
+  "dependencies": {
+    "express": "latest",
+    "express-useragent": "latest",
+    "jade": "latest",
+    "mongodb": ">= 0.0.0",
+    "mongoose": "latest",
+    "less-middleware": "~0.1.12",
+    "connect-mongo": "latest",
+    "connect-flash": "latest",
+    "crypto": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "passport-facebook": "latest",
+    "passport-twitter": "latest",
+    "passport-github": "latest",
+    "passport-google-oauth": "latest",
+    "underscore": "latest",
+    "view-helpers": "latest",
+    "mean-logger": "latest",
+    "forever": "latest",
+    "bower": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-env": "latest",
+    "grunt-shell-spawn": "latest",
+    "oauth": "*",
+    "bcrypt": "~0.7.x",
+    "socket.io": "latest"
+  },
+  "devDependencies": {},
+  "subdomain": "teq1-courseaappdemo",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  }
+}

@@ -1,0 +1,45 @@
+div.modal.fade#addCourseModal(tabindex="-1")
+    div.modal-dialog
+        div.modal-content
+            div.modal-header
+                button(type="button", data-dismiss="modal").close &times;
+                h4 Dodaj kurs
+
+            div.modal-body
+                div(ng-show="!addCourseForm.$valid").alert.alert-warning.fade.in Wypełnij wszystkie wymagane pola
+                form(name="addCourseForm", novalidate=).form-horizontal
+                    div.form-group
+                        label.col-md-3.control-label  Id Kursu
+                        div.col-md-7
+                            input(placeholder="ID kursu", name="courseId", ng-model="addCourseModel.courseId", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label Nazwa Kursu
+                        div.col-md-7
+                            input(placeholder="Nazwa Kursu", name="courseName", ng-model="addCourseModel.courseName", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Typ
+                        div.col-md-7
+                            input(placeholder="select z innej kolekcji ", name="courseTypeId", ng-model="addCourseModel.courseTypeId", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  info
+                        div.col-md-7
+                            textarea(placeholder="info", name="info", ng-model="addCourseModel.info", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  startDate
+                        div.input-group.col-md-7
+                            input(name="startDate", type="text",datepicker-popup="dd-MM-yyyy", ng-model="addCourseModel.startDate", show-weeks="false",show-button-bar="false", is-open="opened", min="minDate", datepicker-options="dateOptions", required, ng-required="true", close-text="Close").form-control
+                            span.input-group-btn
+                                button.btn.btn-default
+                                    i.glyphicon.glyphicon-calendar
+                    div.form-group
+                        label.col-md-3.control-label signupsDate
+                        div.input-group.col-md-7
+                            input(name="signupsDate", type="text",datepicker-popup="dd-MM-yyyy", ng-model="addCourseModel.signupsDate", show-weeks="false", show-button-bar="false", is-open="opened2", min="minDate", datepicker-options="dateOptions2", required, ng-required="true", close-text="Close").form-control
+                            span.input-group-btn
+                                button.btn.btn-default
+                                    i.glyphicon.glyphicon-calendar
+
+
+            div.modal-footer
+                button(type="button", data-dismiss="modal").btn.btn-default Zamknij
+                button(ng-click="addCourse()", ng-disabled="!addCourseForm.$valid", data-dismiss="modal").btn.btn-primary Dodaj Kurs

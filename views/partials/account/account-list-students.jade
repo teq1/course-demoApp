@@ -1,0 +1,29 @@
+div.col-md-12.m-t-10
+    ul.nav.nav-tabs
+        li(ng-repeat="course in coursesTabs", ng-class="{active: $index == 0}")
+            a(data-toggle="tab", ng-click="currentCourseTab(course.courseId)") {{course.courseName}}
+    table.table.table-hover
+        thead
+            tr
+                th lp
+                th imię i nazwisko
+                th email
+                th data
+                th ip
+                th kurs
+                th kurs id
+                th opłacono
+                th data zapłaty
+        tbody
+            tr(data-ng-repeat="student in students | filter:currentCourse")
+                td {{$index}}
+                td {{student.name}} {{student.surname}}
+                td {{student.email}}
+                td {{student.modified | date:'dd-MM-yy HH:mm'}}
+                td {{student.ip}}
+                td {{getCourseName(student.courseId)}}
+                td {{student.courseId}}
+                td
+                    i(ng-show="student.paymentConfirmation").glyphicon.glyphicon-ok.alert-success
+                    i(ng-show="!student.paymentConfirmation").glyphicon.glyphicon-remove.alert-danger
+                td {{student.paymentConfirmationDate | date:'dd-MM-yy HH:mm'}}

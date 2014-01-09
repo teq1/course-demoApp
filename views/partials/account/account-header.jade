@@ -1,0 +1,10 @@
+nav.navbar.navbar-default.account-nav
+    div.navbar-header
+        a.navbar-brand
+            b COURSE APP - ADMIN v{{appVersion}}
+    if user
+            div.navbar-right
+                p.navbar-text Jesteś zalogowany jako:
+                    b.m-l-5=user.username
+                a.btn.btn-default.navbar-btn.m-l-15(href="/account") Konto
+                a.btn.btn-default.navbar-btn.m-l-5(href="/logout") Wyloguj

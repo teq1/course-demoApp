@@ -1,0 +1,85 @@
+/**
+ *
+ * @date    11/28/13 6:03 PM
+ * @author  Wiktor Jamro <w.jamro@smartrecruiters.com>
+ *
+ */
+
+
+#HeroCarousel {
+    height: 429px;
+    width: 100%;
+    margin-bottom: 30px;
+    .carousel-inner {
+        .item {
+            .clearfix();
+            background: url("/img/hero/main-hero-2.jpg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            height: 429px;
+            width: 100%;
+            .background-size(cover);
+            &:nth-child(2){
+                background-image: url('/img/sections-bg/section-quote.jpg');
+                background-position: 0 -120px;
+            }
+            &:nth-child(3){
+                background-image: url('/img/hero/main-hero-1.jpg');
+            }
+            >section{
+                .main-logo {
+                    background-image: url("/img/logo/logo.jpg");
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    width: 300px;
+                    height: 130px;
+                    margin: 100px 139px 0;
+                    z-index: 1;
+                    background-color: #fff;
+                    float: right;
+                }
+                .clearfix();
+                width: 835px;
+                margin: 0 auto;
+                display: block;
+                h1,h2,h3{
+                    font-family: @header-font;
+                    padding: 15px 17px ;
+                    margin: 0;
+                    color: #fff;
+                    background: #000;
+                    display: inline;
+                    float: left;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    &.first-in-hero {
+
+                    }
+                    &.second-in-hero {
+                        margin-left: 153px;
+                    }
+                }
+                .hero-buttons {
+                    float: left;
+                    margin-top: 8px;
+                    width: 100%;
+                    display: block;
+                    text-align: right;
+                }
+            }
+
+        }
+    }
+    .carousel-indicators {
+        bottom: -45px !important;
+        li {
+            background: #aaa;
+            margin-left: 10px;
+            &.active {
+                background: #000;
+            }
+        }
+    }
+}
+

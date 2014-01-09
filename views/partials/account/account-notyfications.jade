@@ -1,0 +1,3 @@
+div(ng-repeat="notification in notifications").m-t-10
+    div(class="{{notification.type}}").alert.alert-dismissable {{notification.name}}
+        button(type="button", data-dismiss="alert", aria-hidden="true").close &times;

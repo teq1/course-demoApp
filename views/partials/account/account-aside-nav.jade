@@ -1,0 +1,20 @@
+ul.list-unstyled
+    li.panel-heading
+        i.glyphicon.glyphicon-user
+        strong Studenci
+    li Wszystkich studentów: {{students.length}}
+    li.m-b-10 Opłacone kursy : {{}}
+    li
+        button(type="button", data-toggle="modal", data-target="#addStudentModal").btn.btn-primary.btn-block.m-b-30
+                span.glyphicon.glyphicon-plus
+                span Dodaj studenta
+
+    li.panel-heading
+        i.glyphicon.glyphicon-user
+        strong Kursy
+    li
+        button(type="button" , ng-repeat="course in courses").btn.btn-sm.btn-default.btn-block
+            span {{course.courseName}}
+        button(type="button", data-toggle="modal", data-target="#addCourseModal").btn.btn-primary.btn-block.m-t-20
+            span.glyphicon.glyphicon-plus
+            span Dodaj kurs

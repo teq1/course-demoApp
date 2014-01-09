@@ -1,0 +1,56 @@
+/**
+ *
+ * @date    11/28/13 11:50 PM
+ * @author  Wiktor Jamro <w.jamro@smartrecruiters.com>
+ *
+ */
+
+.courses-counter {
+    text-align: center;
+    padding: 50px 0;
+    background: #E7E7E7;
+    h2 {
+        font-size: 30px;
+    }
+    .counters {
+        list-style: none;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            &.arrow-link {
+                margin-right: 20px;
+            }
+        }
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            span {
+                font-family: 'Oswald', sans-serif;
+                font-size: 30px;
+                background: #000;
+                color: #fff;
+                padding: 3px 9px;
+                margin-right: 4px;
+                background-image: url('/img/counter-numver-bg.jpg');
+            }
+            div {
+                text-align: center;
+                margin-top: 10px;
+            }
+            &:last-child {
+                margin-right: 0;
+                span {
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+}

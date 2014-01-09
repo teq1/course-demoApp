@@ -1,0 +1,100 @@
+/**
+ *
+ * @date    11/28/13 7:20 PM
+ * @author  Wiktor Jamro <w.jamro@smartrecruiters.com>
+ *
+ */
+
+#MainNav {
+    margin-bottom: 0;
+    background: #fff;
+    border-bottom: @def-border;
+}
+.main-nav{
+    li {
+        border-left: @def-border;
+        &:last-child {
+            border-right: @def-border;
+        }
+        &:first-child {
+            background: url('/img/logo/logo-nav.jpg');
+            width: 140px;
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            background-position: 50% 50%;
+            border-left: none;
+            a {
+                &:hover {
+                    background: transparent;
+                }
+            }
+        }
+    }
+    a {
+        color: @navigation-link;
+        text-transform: capitalize;
+        .transition;
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+        &.active {
+            background: #000;
+            color: #fff;
+        }
+
+    }
+
+}
+.social-icons {
+    padding: 13px 0;
+    float: right;
+    margin: 0;
+    li {
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+
+
+//TODO: przerobić na fonty
+.icons {
+    text-indent: -9999em;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    .transition;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &.facebook {
+        background-image: url("/img/icons/social/facebook.png");
+    }
+    &.twitter {
+        background-image: url("/img/icons/social/twitter.png");
+    }
+    &.youtube {
+        background-image: url("/img/icons/social/youtube.png");
+    }
+    &.google {
+        background-image: url("/img/icons/social/google.png");
+    }
+    &.instagram {
+        background-image: url("/img/icons/social/instagram.png");
+    }
+    &.phone {
+        background-image: url("/img/icons/icon-phone.jpg");
+    }
+    &.email {
+        background-image: url("/img/icons/icon-email.jpg");
+    }
+    &.pin {
+        background-image: url("/img/icons/icon-pin.jpg");
+    }
+
+}

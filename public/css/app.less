@@ -1,0 +1,108 @@
+@import "helpers";
+@import "colors";
+@import "mixins";
+
+@import 'bootstrap/bootstrap';
+
+//GENERAL COMPONENTS
+@import "navigation";
+@import "footer";
+
+//MAIN PAGE
+@import "mainpage/header";
+@import "mainpage/MainQoute";
+@import "mainpage/three-columns";
+
+//PAGES
+@import "sections/signup-section";
+
+//SECTIONS
+@import "sections/bartender-qoute";
+@import "sections/courses-counter";
+@import "sections/main-video";
+@import "sections/crew";
+@import "sections/collage-gallery";
+@import "sections/map-contact";
+@import "sections/admin-login";
+
+//TEMPLATES
+@import "templates/article-template";
+@import "templates/page-header-template";
+
+//ACCOUNT
+@import "account/account";
+
+@header-font: 'Roboto',sans-serif;
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.buttons {
+    padding: 10px 20px 10px 35px;
+    border: none;
+    .border-radius(0);
+    background-position: 10px 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: 16px !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    &.white{
+        color: #000;
+        background: #fff;
+    }
+    &.black {
+        color: #fff;
+        background: #000;
+    }
+    &.sign-up {
+        background-image: url("/img/icons/icon-calendar.png");
+    }
+    &.watch-video {
+        background-image: url("/img/icons/icon-play.png");
+    }
+    &.white-border {
+        font-weight: bold;
+        border: 2px solid #fff;
+        color: #fff;
+        background: rgba(0,0,0,0.3);
+        background-image: url("/img/icons/icon-play.png");
+    }
+}
+a {
+    &.arrow-link {
+        position: relative;
+        font-weight: bold;
+        color: #000;
+        font-family: @header-font;
+        &:after {
+            content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVQ4T2NkoBAwUqifgWYGLAG6bDIQnyTkQlwuUAdq3AzEZUC8AZ8h+LwgB9S4HYi7gHghLkMIhYEY1JBFQHoiNkMIGQDSIwD1zl4g3YBuCDEG8AE1bQTiA0DcSKoBMlAvTAHSM0n1ghpQwxYgrgPiFaQGoiFQwzogzgbibeRE43qgJpCzQQGHFxATiIPcAACMlBQRo5OyLgAAAABJRU5ErkJggg==');
+            font-style: normal;
+            text-transform: none;
+            speak: none;
+            text-rendering: optimizelegibility;
+            position: absolute;
+            margin-left: 5px;
+            top: 2px;
+        }
+    }
+}
+
+h2 {
+    font-family: @header-font;
+    font-size: 36px;
+    color: #000;
+    font-weight: bold;
+}
+h4 {
+    font-family: @header-font;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+h6 {
+    font-weight: normal;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 16px;
+}

@@ -1,0 +1,46 @@
+div.modal.fade#addStudentModal(tabindex="-1")
+    div.modal-dialog
+        div.modal-content
+            div.modal-header
+                button(type="button", data-dismiss="modal").close &times;
+                h4 Dodaj studenta
+
+            div.modal-body
+                div(ng-show="!addStudentForm.$valid").alert.alert-warning.fade.in Wypełnij wszystkie wymagane pola
+                form(name="addStudentForm", novalidate=).form-horizontal
+                    div.form-group
+                        label.col-md-3.control-label  Imię
+                        div.col-md-7
+                            input(placeholder="Imię", name="name", ng-model="addStudentModel.name", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Nazwisko
+                        div.col-md-7
+                            input(placeholder="Nazwisko", name="surname", ng-model="addStudentModel.surname", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Email
+                        div.col-md-7
+                            input(placeholder="Email", name="email", ng-model="addStudentModel.email", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Adres
+                        div.col-md-7
+                            input(placeholder="Adres", name="address", ng-model="addStudentModel.address", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Telefon
+                        div.col-md-7
+                            input(placeholder="Telefon", name="phone", ng-model="addStudentModel.phone", required, ng-minlength=2).form-control
+                    div.form-group
+                        label.col-md-3.control-label  Informacje
+                        div.col-md-7
+                            textarea(placeholder="Informacje", name="info", ng-model="addStudentModel.info").form-control
+                    div.form-group
+                        label.col-md-3.control-label  Kurs
+                        div.col-md-7
+                            select.form-control(ng-options="c.courseName for c in courses", ng-model="addStudentModel.courseId")
+
+
+
+
+
+            div.modal-footer
+                button(type="button", data-dismiss="modal").btn.btn-default Zamknij
+                button(ng-click="addStudent()", ng-disabled="!addStudentForm.$valid", data-dismiss="modal").btn.btn-primary Dodaj Studenta
